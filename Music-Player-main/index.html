@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicPlaz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="assets/images/icon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="song_info">
+        <div class="name_artist">
+          <div class="name_song">
+            <div class="name">
+              Pata nehi kis roop me akar Narayan Mil jayega
+            </div>
+          </div>
+          <div class="artist">Unknown</div>
+        </div>
+        <div class="setting">
+          <img src="svg/context-menu-svgrepo-com.svg" />
+        </div>
+      </div>
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-art"></div>
+
+      <div class="player">
+        <div class="seek-bar-container">
+          <input
+            type="range"
+            class="music-seek-bar"
+            value="0"
+            min="0"
+            max="100"
+            onchange="seekTo()"
+          />
+          <div class="time">
+            <p class="current-time">00 : 00</p>
+            <p class="duration">00 : 00</p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="prev-track" onclick="prevTrack()">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-5x"></i>
+          </div>
+          <div class="next-track" onclick="nextTrack()">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+        </div>
+
+        <div class="volume-bar-container">
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="volume-seek-bar"
+            onchange="setVolume()"
+          />
+          <i class="fa fa-volume-up"></i>
+        </div>
+      </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
+  </body>
+</html>
